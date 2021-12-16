@@ -1,6 +1,7 @@
 .DS_STORE
 
 dist
+public
 node_modules
 .parcel-cache
 .cache
