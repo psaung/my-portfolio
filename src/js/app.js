@@ -163,6 +163,7 @@ function handleImageLoaded() {
 disableScroll();
 
 function onComplete() {
+  enableScroll();
   setTimeout(() => {
     $(".main").onepage_scroll({
       sectionContainer: "section",
@@ -224,7 +225,12 @@ handleImageLoaded().then(() => {
 
   gsap.from(headerName, {
     top: "50%",
-    alpha: 0,
+    duration: 0.5,
+    easing: "power1",
+  });
+
+  gsap.to(headerName, {
+    alpha: 1,
     duration: 0.5,
     easing: "power1",
   });
@@ -241,8 +247,15 @@ handleImageLoaded().then(() => {
   gsap.from(loader, {
     y: "100px",
     duration: 0.5,
-    delay: 0.2,
     scale: 0,
+    delay: 0.2,
+    easing: "power1",
+  });
+
+  gsap.to(loader, {
+    duration: 0.5,
+    alpha: 1,
+    delay: 0.2,
     easing: "power1",
   });
 

@@ -235,7 +235,7 @@ h6 {
   position: fixed;
   top: calc(50% - 100px);
   left: calc(50% - 110px);
-  opacity: 1;
+  opacity: 0;
   z-index: 99999;
   color: var(--colors-white);
 }
@@ -685,6 +685,10 @@ a {
   &.show {
     display: flex;
   }
+}
+
+.loader-wrapper {
+  opacity: 0;
 }
 
 .loader,
