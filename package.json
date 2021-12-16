@@ -1,0 +1,24 @@
+{
+  "name": "my-portfolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@barba/core": "^2.9.7",
+    "gsap": "^3.8.0",
+    "image-loaded": "^0.0.2",
+    "imagesloaded": "^4.1.4",
+    "rxjs": "^7.4.0",
+    "sass": "^1.43.4",
+    "theaterjs": "^3.2.0",
+    "three": "^0.134.0",
+    "vivus": "^0.4.6"
+  },
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}
