@@ -728,3 +728,22 @@ a {
     transform: rotate(360deg);
   }
 }
+
+.scroll-container {
+  width: 1px;
+  position: fixed;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.3);
+  bottom: 5%;
+  left: 5%;
+}
+
+.scroll-bar {
+  position: absolute;
+  top: 0;
+  left: -1px;
+  background: #ccc;
+  width: 3px;
+  height: 20%;
+  border-radius: 1px;
+}

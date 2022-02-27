@@ -163,6 +163,7 @@ function handleImageLoaded() {
 disableScroll();
 
 function onComplete() {
+  console.log("trigger twice");
   enableScroll();
   setTimeout(() => {
     $(".main").onepage_scroll({
@@ -172,7 +173,16 @@ function onComplete() {
       beforeMove: (idx) => {
         currentStep = idx;
         handlePagination(idx);
+        const scrollBar = document.getElementById("scroll-bar");
+
+        console.log(idx, scrollBar.offsetHeight);
+        gsap.to(scrollBar, {
+          easing: "Elastic",
+          duration: 0.5,
+          y: scrollBar.offsetHeight * (idx - 1),
+        });
       },
+
       pagination: false,
       duration: 500,
     });
